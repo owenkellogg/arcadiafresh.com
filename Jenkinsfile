@@ -1,4 +1,5 @@
 node {
   sh "echo 'run the tests here'"
-  sh "docker build -t arcadiafresh.com ."
+  docker.build 'arcadiafresh.com'
+  sh "echo 'built docker image'"
 }
