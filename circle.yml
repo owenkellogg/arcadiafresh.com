@@ -1,0 +1,10 @@
+machine:
+  services:
+    - docker
+
+dependencies:
+  pre:
+    - docker-compose build
+test:
+  override:
+    - docker-compose run webapp npm test

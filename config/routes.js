@@ -34,7 +34,17 @@ module.exports.routes = {
 
   '/': {
     view: 'homepage'
-  }
+  },
+  'GET /drivers': {
+    view: 'drivers/index'
+  },
+  'GET /drivers/profile': {
+    view: 'drivers/show'
+  },
+
+  'POST /api/drivers': 'DriversController.create',
+  'GET /api/drivers/:id/settings': 'DriverSettingsController.show',
+  'PUT /api/drivers/:id/settings': 'DriverSettingsController.update'
 
   /***************************************************************************
   *                                                                          *
