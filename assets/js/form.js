@@ -10,6 +10,7 @@ $(function() {
             event.preventDefault(); // prevent default submit behaviour
             // get values from FORM
             var email = $("input#email").val();
+            $('#contactForm').trigger("reset");
             // Check for white space in name for Success/Fail message
             $.ajax({
                 url: "/leads",
