@@ -194,5 +194,18 @@
 <!-- Custom Theme JavaScript -->
 <script src="js/xslanding.js"></script>
 
+<script>
+  $(document).ready(function() {
+
+    console.log("document ready")
+    $("form").on("submit", function(event) {
+      event.preventDefault()
+      event.stopPropagation()
+      console.log($("form").serialize())
+    })
+  })
+</script>
+
+
 </body>
 </html>
