@@ -42,6 +42,8 @@ module.exports.routes = {
     view: 'drivers/show'
   },
 
+  'POST /leads/create': 'LeadsController.create',
+
   'POST /api/drivers': 'DriversController.create',
   'GET /api/drivers/:id/settings': 'DriverSettingsController.show',
   'PUT /api/drivers/:id/settings': 'DriverSettingsController.update'
